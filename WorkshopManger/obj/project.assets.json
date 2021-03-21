@@ -9,22 +9,25 @@
   },
   "packageFolders": {
     "C:\\Users\\Leeno\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leeno\\source\\repos\\WorkshopManger\\WorkshopManger.csproj",
+      "projectUniqueName": "C:\\Users\\Leeno\\OneDrive\\المستندات\\GitHub\\Workshopmanager_Csharp\\WorkshopManger\\WorkshopManger.csproj",
       "projectName": "WorkshopManger",
-      "projectPath": "C:\\Users\\Leeno\\source\\repos\\WorkshopManger\\WorkshopManger.csproj",
+      "projectPath": "C:\\Users\\Leeno\\OneDrive\\المستندات\\GitHub\\Workshopmanager_Csharp\\WorkshopManger\\WorkshopManger.csproj",
       "packagesPath": "C:\\Users\\Leeno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leeno\\source\\repos\\WorkshopManger\\obj\\",
+      "outputPath": "C:\\Users\\Leeno\\OneDrive\\المستندات\\GitHub\\Workshopmanager_Csharp\\WorkshopManger\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Leeno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

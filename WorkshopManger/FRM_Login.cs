@@ -16,22 +16,22 @@ namespace FisrtDataAccess
         {
             InitializeComponent();
         }
-        Account acc = new Account();
+      //  Account acc = new Account();
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            int CId;
-            if (acc.CheckUserExists(txtUserName.Text, txtPassord.Text,out CId) == 1)
-            {
+            //int CId;
+            //if (acc.CheckUserExists(txtUserName.Text, txtPassord.Text,out CId) == 1)
+            //{
 
-                Account.CustomerId = CId;
-                //redirect to main form
-                FormMain frm = new FormMain();
-                frm.Show();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Username or password");
-            }
+            ////    Account.CustomerId = CId;
+            //    //redirect to main form
+            //  //  FormMain frm = new FormMain();
+            //  //  frm.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Invalid Username or password");
+            //}
 
         }
     }
