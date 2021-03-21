@@ -2,5 +2,5 @@ WorkshopManger/bin/*
 WorkshopManger/.vs/*
 WorkshopManger/obj/*
 Workshopmanager_Csharp\.vs
-
-
+.vs/*
+.vs/Workshopmanager_Csharp/v16/.suo
