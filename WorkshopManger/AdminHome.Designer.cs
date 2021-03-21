@@ -65,6 +65,7 @@ namespace WorkshopManger
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -333,11 +334,20 @@ namespace WorkshopManger
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Location = new System.Drawing.Point(99, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(698, 450);
+            this.panel1.TabIndex = 5;
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminHome";
@@ -389,5 +399,6 @@ namespace WorkshopManger
         private System.Windows.Forms.ToolStripMenuItem OrgnaizerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem WorkshopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AudienceToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
