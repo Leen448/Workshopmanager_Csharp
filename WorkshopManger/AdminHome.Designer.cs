@@ -66,7 +66,9 @@ namespace WorkshopManger
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -337,10 +339,20 @@ namespace WorkshopManger
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(99, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(698, 450);
             this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // AdminHome
             // 
@@ -355,6 +367,8 @@ namespace WorkshopManger
             this.Load += new System.EventHandler(this.AdminHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +414,6 @@ namespace WorkshopManger
         private System.Windows.Forms.ToolStripMenuItem WorkshopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AudienceToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
