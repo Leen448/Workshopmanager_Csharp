@@ -12,3 +12,4 @@ WorkshopManger/obj/Debug/netcoreapp3.1/WorkshopManger.csprojAssemblyReference.ca
 WorkshopManger/obj/project.assets.json
 WorkshopManger/obj/Release/netcoreapp3.1/WorkshopManger.assets.cache
 WorkshopManger/obj/WorkshopManger.csproj.nuget.g.props
+.vs/slnx.sqlite
