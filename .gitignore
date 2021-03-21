@@ -2,3 +2,5 @@
 *.sqlite
 
 WorkshopManger/.vs/
+WorkshopManger/bin/
+WorkshopManger/obj/
