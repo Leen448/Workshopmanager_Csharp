@@ -1,15 +1,5 @@
+WorkshopManger/bin/*
+WorkshopManger/.vs/*
+WorkshopManger/obj/*
 
-*.sqlite
 
-WorkshopManger/.vs/
-WorkshopManger/bin/
-WorkshopManger/obj/
-.vs/slnx.sqlite
-.vs/ProjectSettings.json
-WorkshopManger/obj
-WorkshopManger/obj/Debug/netcoreapp3.1/WorkshopManger.assets.cache
-WorkshopManger/obj/Debug/netcoreapp3.1/WorkshopManger.csprojAssemblyReference.cache
-WorkshopManger/obj/project.assets.json
-WorkshopManger/obj/Release/netcoreapp3.1/WorkshopManger.assets.cache
-WorkshopManger/obj/WorkshopManger.csproj.nuget.g.props
-.vs/slnx.sqlite
