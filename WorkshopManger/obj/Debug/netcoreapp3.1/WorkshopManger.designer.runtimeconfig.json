@@ -6,9 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Leeno\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Leeno\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+      "C:\\Users\\ranim\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ranim\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "configProperties": {

@@ -4,9 +4,18 @@
     <Compile Update="AddEmp.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Update="AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
+=======
+<<<<<<< HEAD
+=======
+    <Compile Update="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> 7db3a2cd12deb497af207912fd7ff51e9f4e5caa
+>>>>>>> Stashed changes
     <Compile Update="FRM_Login.cs">
       <SubType>Form</SubType>
     </Compile>
