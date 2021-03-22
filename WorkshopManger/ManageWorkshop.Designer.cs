@@ -40,26 +40,27 @@ namespace WorkshopManger
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -169,26 +170,12 @@ namespace WorkshopManger
             this.textBox4.Size = new System.Drawing.Size(137, 23);
             this.textBox4.TabIndex = 13;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(361, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(137, 23);
-            this.textBox5.TabIndex = 14;
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(619, 94);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(137, 23);
             this.textBox6.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(123, 94);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(137, 23);
-            this.textBox7.TabIndex = 16;
             // 
             // richTextBox1
             // 
@@ -225,6 +212,20 @@ namespace WorkshopManger
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(319, 45);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(195, 23);
+            this.dateTimePicker1.TabIndex = 24;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(123, 94);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(137, 23);
+            this.numericUpDown1.TabIndex = 25;
+            // 
             // ManageWorkshop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -236,6 +237,7 @@ namespace WorkshopManger
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,11 +255,11 @@ namespace WorkshopManger
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
