@@ -37,7 +37,7 @@ namespace WorkshopManger
 
         private void updateOrg_Click(object sender, EventArgs e)
         {
-            int result = org.UpdateOrganizer(r,textBoxName.Text, textBoxPhone.Text, textBoxEmail.Text, textBoxPassword.Text);
+            int result = org.UpdateOrganizer(r,textBoxNameOrg.Text, textBoxPhoneOrg.Text, textBoxEmailOrg.Text, textBoxPasswordOrg.Text);
             if (result != 0)
             {
                 MessageBox.Show("Data Updated Successfully.");
@@ -49,24 +49,23 @@ namespace WorkshopManger
 
         private void ClearControls()
         {
-            textBoxName.Text = "";
-            textBoxPhone.Text = "";
-            textBoxEmail.Text = "";
-            textBoxPassword.Text = "";
+            textBoxNameOrg.Text = "";
+            textBoxPhoneOrg.Text = "";
+            textBoxEmailOrg.Text = "";
+            textBoxPasswordOrg.Text = "";
         }
 
         int r;
-        private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvOrg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //GetCustomerById
             r = (int)dgvOrg.CurrentRow.Cells[0].Value;
             DataTable dt = org.GetOrganizerById(r);
             DataRow row = dt.Rows[0];
-            textBoxName.Text = row["Name"].ToString();
-            textBoxPhone.Text = row["Phone"].ToString();
-            textBoxEmail.Text = row["Email"].ToString();
-            textBoxPassword.Text = row["Password"].ToString();
-
+            textBoxNameOrg.Text = row["OrgName"].ToString();
+            textBoxPhoneOrg.Text = row["Phone"].ToString();
+            textBoxEmailOrg.Text = row["Email"].ToString();
+            textBoxPasswordOrg.Text = row["OrgAdmPassword"].ToString();
+            
 
         }
 

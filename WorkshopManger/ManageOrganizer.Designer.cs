@@ -36,10 +36,10 @@ namespace WorkshopManger
             this.deleteOrg = new System.Windows.Forms.Button();
             this.updateOrg = new System.Windows.Forms.Button();
             this.dgvOrg = new System.Windows.Forms.DataGridView();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneOrg = new System.Windows.Forms.TextBox();
+            this.textBoxEmailOrg = new System.Windows.Forms.TextBox();
+            this.textBoxPasswordOrg = new System.Windows.Forms.TextBox();
+            this.textBoxNameOrg = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,10 +53,10 @@ namespace WorkshopManger
             this.groupBox1.Controls.Add(this.deleteOrg);
             this.groupBox1.Controls.Add(this.updateOrg);
             this.groupBox1.Controls.Add(this.dgvOrg);
-            this.groupBox1.Controls.Add(this.textBoxPhone);
-            this.groupBox1.Controls.Add(this.textBoxEmail);
-            this.groupBox1.Controls.Add(this.textBoxPassword);
-            this.groupBox1.Controls.Add(this.textBoxName);
+            this.groupBox1.Controls.Add(this.textBoxPhoneOrg);
+            this.groupBox1.Controls.Add(this.textBoxEmailOrg);
+            this.groupBox1.Controls.Add(this.textBoxPasswordOrg);
+            this.groupBox1.Controls.Add(this.textBoxNameOrg);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -121,34 +121,35 @@ namespace WorkshopManger
             this.dgvOrg.RowTemplate.Height = 25;
             this.dgvOrg.Size = new System.Drawing.Size(579, 177);
             this.dgvOrg.TabIndex = 8;
+            this.dgvOrg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrg_CellContentClick);
             // 
-            // textBoxPhone
+            // textBoxPhoneOrg
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(490, 99);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(238, 23);
-            this.textBoxPhone.TabIndex = 7;
+            this.textBoxPhoneOrg.Location = new System.Drawing.Point(490, 99);
+            this.textBoxPhoneOrg.Name = "textBoxPhoneOrg";
+            this.textBoxPhoneOrg.Size = new System.Drawing.Size(238, 23);
+            this.textBoxPhoneOrg.TabIndex = 7;
             // 
-            // textBoxEmail
+            // textBoxEmailOrg
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(490, 43);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(238, 23);
-            this.textBoxEmail.TabIndex = 6;
+            this.textBoxEmailOrg.Location = new System.Drawing.Point(490, 43);
+            this.textBoxEmailOrg.Name = "textBoxEmailOrg";
+            this.textBoxEmailOrg.Size = new System.Drawing.Size(238, 23);
+            this.textBoxEmailOrg.TabIndex = 6;
             // 
-            // textBoxPassword
+            // textBoxPasswordOrg
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(149, 99);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(227, 23);
-            this.textBoxPassword.TabIndex = 5;
+            this.textBoxPasswordOrg.Location = new System.Drawing.Point(149, 99);
+            this.textBoxPasswordOrg.Name = "textBoxPasswordOrg";
+            this.textBoxPasswordOrg.Size = new System.Drawing.Size(227, 23);
+            this.textBoxPasswordOrg.TabIndex = 5;
             // 
-            // textBoxName
+            // textBoxNameOrg
             // 
-            this.textBoxName.Location = new System.Drawing.Point(149, 43);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(227, 23);
-            this.textBoxName.TabIndex = 4;
+            this.textBoxNameOrg.Location = new System.Drawing.Point(149, 43);
+            this.textBoxNameOrg.Name = "textBoxNameOrg";
+            this.textBoxNameOrg.Size = new System.Drawing.Size(227, 23);
+            this.textBoxNameOrg.TabIndex = 4;
             // 
             // label4
             // 
@@ -198,6 +199,7 @@ namespace WorkshopManger
             this.Controls.Add(this.groupBox1);
             this.Name = "ManageOrganizer";
             this.Text = "ManageOrganizer";
+            this.Load += new System.EventHandler(this.FRM_ManageOrganizer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrg)).EndInit();
@@ -211,10 +213,10 @@ namespace WorkshopManger
         private System.Windows.Forms.Button deleteOrg;
         private System.Windows.Forms.Button updateOrg;
         private System.Windows.Forms.DataGridView dgvOrg;
-        private System.Windows.Forms.TextBox textBoxPhone;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxPhoneOrg;
+        private System.Windows.Forms.TextBox textBoxEmailOrg;
+        private System.Windows.Forms.TextBox textBoxPasswordOrg;
+        private System.Windows.Forms.TextBox textBoxNameOrg;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

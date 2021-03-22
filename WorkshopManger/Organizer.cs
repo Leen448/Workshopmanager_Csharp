@@ -51,7 +51,7 @@ namespace WorkshopManger
         public DataTable GetOrganizerById(int id)
         {
             con.Open();
-            cmd.CommandText = "select * from Organaizer_Admin where Id =" + id;
+            cmd.CommandText = "select * from Organaizer_Admin where ID =" + id;
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con;
             SqlDataReader dr = cmd.ExecuteReader();// read from database
