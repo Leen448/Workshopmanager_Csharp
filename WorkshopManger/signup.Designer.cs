@@ -78,7 +78,6 @@ namespace WorkshopManger
             this.label1.Size = new System.Drawing.Size(113, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Frist Name:";
-           
             // 
             // LName_textbox
             // 
@@ -120,7 +119,6 @@ namespace WorkshopManger
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account Info";
-    
             // 
             // GoToLogin
             // 
@@ -132,7 +130,7 @@ namespace WorkshopManger
             this.GoToLogin.Size = new System.Drawing.Size(223, 24);
             this.GoToLogin.TabIndex = 10;
             this.GoToLogin.Text = "Have an account ? login";
-         
+            this.GoToLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GoToLogin_Click);
             // 
             // button2
             // 
@@ -145,7 +143,7 @@ namespace WorkshopManger
             this.button2.TabIndex = 9;
             this.button2.Text = "Sing up";
             this.button2.UseVisualStyleBackColor = true;
-      
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -179,7 +177,6 @@ namespace WorkshopManger
             this.label3.Size = new System.Drawing.Size(66, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "Email:";
-           
             // 
             // Phone_textbox
             // 
@@ -189,7 +186,6 @@ namespace WorkshopManger
             this.Phone_textbox.Name = "Phone_textbox";
             this.Phone_textbox.Size = new System.Drawing.Size(352, 32);
             this.Phone_textbox.TabIndex = 5;
-           
             // 
             // Password_textbox
             // 
@@ -340,8 +336,7 @@ namespace WorkshopManger
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "signup";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.signup_Load);
+            this.Text = "Signup";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

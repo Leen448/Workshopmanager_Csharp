@@ -16,8 +16,52 @@ namespace WorkshopManger
         {
             InitializeComponent();
         }
-        private void signup_Load(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)
         {
+            Audience aud = new Audience();
+
+
+            if ( FName_textbox.TextLength != 0 &&
+                 LName_textbox.TextLength != 0 &&
+                 Phone_textbox.TextLength != 0 &&
+                 Email_textbox.TextLength != 0 &&
+                 Password_textbox.TextLength != 0
+                )
+            {
+                if (aud.AudienceSignUp(FName_textbox.Text,
+                                       LName_textbox.Text,
+                                       Phone_textbox.Text,
+                                       Email_textbox.Text,
+                                       Password_textbox.Text) == 1)
+                {
+                    FName_textbox.Text = "";
+                    LName_textbox.Text = "";
+                    Phone_textbox.Text = "";
+                    Email_textbox.Text = "";
+                    Password_textbox.Text = "";
+                    MessageBox.Show("Signed up successfully..Now you can login to your account");
+                 
+                }
+                else
+                {
+                    MessageBox.Show("User Already exists.. Please try to Login");
+                }
+            }
+            {
+                MessageBox.Show("Please ensure fill all fileds"); 
+            }
+
+        }
+
+   
+        private void GoToLogin_Click(object sender, MouseEventArgs e)
+        {
+           
+            User_Login Form = new User_Login();
+            Form.Tag = this;
+            Form.Show(this);
+            Hide();
 
         }
     }
