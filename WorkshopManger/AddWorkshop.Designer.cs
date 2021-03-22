@@ -30,13 +30,14 @@ namespace WorkshopManger
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.textBoxDuration = new System.Windows.Forms.TextBox();
+            this.textBoxLocation = new System.Windows.Forms.TextBox();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
+            this.numericUpDownSeats = new System.Windows.Forms.NumericUpDown();
+            this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
+            this.richTextBoxDesc = new System.Windows.Forms.RichTextBox();
+            this.textBoxPresenter = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,21 +45,20 @@ namespace WorkshopManger
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeats)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.buttonAdd);
+            this.groupBox1.Controls.Add(this.textBoxDuration);
+            this.groupBox1.Controls.Add(this.textBoxLocation);
+            this.groupBox1.Controls.Add(this.textBoxTitle);
+            this.groupBox1.Controls.Add(this.numericUpDownSeats);
+            this.groupBox1.Controls.Add(this.dateTimePickerDate);
+            this.groupBox1.Controls.Add(this.richTextBoxDesc);
+            this.groupBox1.Controls.Add(this.textBoxPresenter);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label4);
@@ -73,55 +73,65 @@ namespace WorkshopManger
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Workshop";
             // 
-            // textBox3
+            // buttonAdd
             // 
-            this.textBox3.Location = new System.Drawing.Point(671, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 28;
+            this.buttonAdd.Location = new System.Drawing.Point(678, 244);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 29;
+            this.buttonAdd.Text = "Add";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // textBox2
+            // textBoxDuration
             // 
-            this.textBox2.Location = new System.Drawing.Point(355, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 23);
-            this.textBox2.TabIndex = 27;
+            this.textBoxDuration.Location = new System.Drawing.Point(671, 84);
+            this.textBoxDuration.Name = "textBoxDuration";
+            this.textBoxDuration.Size = new System.Drawing.Size(100, 23);
+            this.textBoxDuration.TabIndex = 28;
             // 
-            // textBox1
+            // textBoxLocation
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 23);
-            this.textBox1.TabIndex = 26;
+            this.textBoxLocation.Location = new System.Drawing.Point(355, 84);
+            this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.Size = new System.Drawing.Size(196, 23);
+            this.textBoxLocation.TabIndex = 27;
             // 
-            // numericUpDown1
+            // textBoxTitle
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(671, 47);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 23);
-            this.numericUpDown1.TabIndex = 25;
+            this.textBoxTitle.Location = new System.Drawing.Point(60, 50);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(196, 23);
+            this.textBoxTitle.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // numericUpDownSeats
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(60, 86);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(195, 23);
-            this.dateTimePicker1.TabIndex = 24;
+            this.numericUpDownSeats.Location = new System.Drawing.Point(671, 47);
+            this.numericUpDownSeats.Name = "numericUpDownSeats";
+            this.numericUpDownSeats.Size = new System.Drawing.Size(100, 23);
+            this.numericUpDownSeats.TabIndex = 25;
             // 
-            // richTextBox1
+            // dateTimePickerDate
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(123, 142);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(630, 81);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
+            this.dateTimePickerDate.Location = new System.Drawing.Point(60, 86);
+            this.dateTimePickerDate.Name = "dateTimePickerDate";
+            this.dateTimePickerDate.Size = new System.Drawing.Size(195, 23);
+            this.dateTimePickerDate.TabIndex = 24;
             // 
-            // textBox4
+            // richTextBoxDesc
             // 
-            this.textBox4.Location = new System.Drawing.Point(355, 48);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 23);
-            this.textBox4.TabIndex = 13;
+            this.richTextBoxDesc.Location = new System.Drawing.Point(123, 142);
+            this.richTextBoxDesc.Name = "richTextBoxDesc";
+            this.richTextBoxDesc.Size = new System.Drawing.Size(630, 81);
+            this.richTextBoxDesc.TabIndex = 20;
+            this.richTextBoxDesc.Text = "";
+            // 
+            // textBoxPresenter
+            // 
+            this.textBoxPresenter.Location = new System.Drawing.Point(355, 48);
+            this.textBoxPresenter.Name = "textBoxPresenter";
+            this.textBoxPresenter.Size = new System.Drawing.Size(196, 23);
+            this.textBoxPresenter.TabIndex = 13;
             // 
             // label8
             // 
@@ -193,15 +203,6 @@ namespace WorkshopManger
             this.label2.TabIndex = 1;
             this.label2.Text = "Date:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(678, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // AddWorkshop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -212,7 +213,7 @@ namespace WorkshopManger
             this.Text = "AddWorkshop";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeats)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,14 +221,14 @@ namespace WorkshopManger
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.TextBox textBoxDuration;
+        private System.Windows.Forms.TextBox textBoxLocation;
+        private System.Windows.Forms.TextBox textBoxTitle;
+        private System.Windows.Forms.NumericUpDown numericUpDownSeats;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDate;
+        private System.Windows.Forms.RichTextBox richTextBoxDesc;
+        private System.Windows.Forms.TextBox textBoxPresenter;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
