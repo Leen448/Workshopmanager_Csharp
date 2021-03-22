@@ -36,23 +36,23 @@ namespace WorkshopManger
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.logouttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MyProfiletoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.logouttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MyProfiletoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -102,40 +102,24 @@ namespace WorkshopManger
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Orgnizer";
             // 
-            // groupBox3
+            // button3
             // 
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Location = new System.Drawing.Point(3, 185);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(794, 176);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Workshop";
+            this.button3.Location = new System.Drawing.Point(537, 60);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(228, 29);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Statistics";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // menuStrip1
+            // button2
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logouttoolStripMenuItem1,
-            this.MyProfiletoolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(819, 28);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // logouttoolStripMenuItem1
-            // 
-            this.logouttoolStripMenuItem1.Name = "logouttoolStripMenuItem1";
-            this.logouttoolStripMenuItem1.Size = new System.Drawing.Size(70, 24);
-            this.logouttoolStripMenuItem1.Text = "Logout";
-            // 
-            // MyProfiletoolStripMenuItem1
-            // 
-            this.MyProfiletoolStripMenuItem1.Name = "MyProfiletoolStripMenuItem1";
-            this.MyProfiletoolStripMenuItem1.Size = new System.Drawing.Size(90, 24);
-            this.MyProfiletoolStripMenuItem1.Text = "My Profile";
+            this.button2.Location = new System.Drawing.Point(287, 60);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(228, 29);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Add New Orgnizer";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -147,24 +131,16 @@ namespace WorkshopManger
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // groupBox3
             // 
-            this.button2.Location = new System.Drawing.Point(287, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Add New Orgnizer";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(537, 60);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(228, 29);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Statistics";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Location = new System.Drawing.Point(3, 185);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(794, 176);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Workshop";
             // 
             // button4
             // 
@@ -213,6 +189,30 @@ namespace WorkshopManger
             this.button7.Text = "View Audience";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logouttoolStripMenuItem1,
+            this.MyProfiletoolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(805, 28);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // logouttoolStripMenuItem1
+            // 
+            this.logouttoolStripMenuItem1.Name = "logouttoolStripMenuItem1";
+            this.logouttoolStripMenuItem1.Size = new System.Drawing.Size(70, 24);
+            this.logouttoolStripMenuItem1.Text = "Logout";
+            // 
+            // MyProfiletoolStripMenuItem1
+            // 
+            this.MyProfiletoolStripMenuItem1.Name = "MyProfiletoolStripMenuItem1";
+            this.MyProfiletoolStripMenuItem1.Size = new System.Drawing.Size(90, 24);
+            this.MyProfiletoolStripMenuItem1.Text = "My Profile";
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -226,9 +226,9 @@ namespace WorkshopManger
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
