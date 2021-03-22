@@ -15,8 +15,19 @@ namespace WorkshopManger
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonAddOrg_Click(object sender, EventArgs e)
         {
+
+
+            Organizer org = new Organizer();
+            org.AddOrganizer(textBoxName.Text, textBoxPhone.Text, textBoxEmail.Text,
+                textBoxPassword.Text);
+            MessageBox.Show("Data Inserted successfully.");
+            textBoxName.Text = "";
+            textBoxPhone.Text = "";
+            textBoxEmail.Text = "";
+            textBoxPassword.Text = "";
+
 
         }
     }

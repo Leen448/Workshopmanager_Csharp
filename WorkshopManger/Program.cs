@@ -17,7 +17,7 @@ namespace WorkshopManger
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new signup());
+            Application.Run(new AddOrganizer());
         }
     }
 }
