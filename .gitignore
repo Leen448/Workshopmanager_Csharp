@@ -7,3 +7,4 @@ Workshopmanager_Csharp\.vs
 WorkshopManger/obj/Debug/netcoreapp3.1/WorkshopManger.assets.cache
 ../.vs/slnx.sqlite
 WorkshopManger/.vs/WorkshopManger/v16/.suo
+*.cache
