@@ -1,92 +1,114 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Data.SqlClient;
 using System.Text;
-using System.Windows.Forms;
 
 namespace WorkshopManger
 {
-    public partial class Audience : Form
+    class Audience : Account
     {
-        
+
+        SqlConnection con;
+        SqlCommand cmd;
         public Audience()
         {
-            InitializeComponent();
-            var dataFromDb = GetData();
-
-            foreach (var itm in dataFromDb)
-            {
-                flowLayoutPanel1.Controls.Add(GetGroupBox(itm, 200, 100));
-            }
+            // default constructor
+            //  con = new SqlConnection("data source=.;database=WorkshopDB;integrated security=true;");
+            con = new SqlConnection("data source=LEEN-DESKTOP\\MSSQLSERVER01;database=WorkshopDB;integrated security=true;");
+            cmd = new SqlCommand();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public static int AudiencerId { get; set; }
+        public int AudienceSignUp(string Fname,string Lname, string phone,string email, string password )
         {
-           
-        }
+            con.Open();
+            cmd.CommandText = "SignUp_Audience";//sproc name or tsql
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;// determin the connecton to command 
+            cmd.Parameters.Clear();//
 
+            cmd.Parameters.AddWithValue("@FName", Fname);
+            cmd.Parameters.AddWithValue("@LName", Lname);
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@AudPassword", password);
+            cmd.Parameters.AddWithValue("@Phone", phone);
 
-        private GroupBox GetGroupBox(Category c, int width, int height)
-        {
-            GroupBox g = new GroupBox();
-            g.Size = new Size(width, height);
-            g.Text = c.Name;
+            cmd.Parameters.Add("@return", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 
-            var y = 20;
-            foreach (var itm in c.Items)
-            {
-                CheckBox cb = new CheckBox();
-                cb.Text = itm;
-                cb.Location = new Point(5, y);
-                // you can add an event here...
-                cb.CheckedChanged += cb_SomeEvent;
-                g.Controls.Add(cb);
-                y += 20;
-            }
+            cmd.ExecuteNonQuery();
 
-            return g;
-        }
-
-        private void cb_SomeEvent(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private List<Category> GetData()
-        {
-            // Just to simulate a database...
-            Category c1 = new Category("Fruit", new List<string>() { "Banana", "Apple" });
-            Category c2 = new Category("Vegetables", new List<string>() { "Avocado", "Tomato" });
-            Category c3 = new Category("Programming Languages", new List<string>() { "C#", "Visual Basic" });
-            Category c4 = new Category("Stars", new List<string>() { "Venus", "Mars" });
-
-            List<Category> result = new List<Category>();
-            result.Add(c1);
-            result.Add(c2);
-            result.Add(c3);
-            result.Add(c4);
-
-            return result;
-        }
-   
-    class Category
-    {
-        public string Name;
-        public List<string> Items;
-
-        public Category(string name, List<string> items)
-        {
-            this.Name = name;
-            this.Items = items;
-        }
-    }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
+            int r = (int)cmd.Parameters["@return"].Value;
+            con.Close();
+            return r;
 
         }
-    }
+
+
+
+
+
+
+
+            //    public DataTable GetAllOrganizer()
+            //    {
+            //        con.Open();
+            //        cmd.CommandText = "select * from Organaizer_Admin";
+            //        cmd.CommandType = CommandType.Text;
+            //        cmd.Connection = con;
+            //        SqlDataReader dr = cmd.ExecuteReader();// read from database
+            //        DataTable dt = new DataTable();
+            //        dt.Load(dr);// fill dt with data from dr
+            //        con.Close();
+            //        return dt;
+            //    }
+            //    public DataTable GetOrganizerById(int id)
+            //    {
+            //        con.Open();
+            //        cmd.CommandText = "select * from Organaizer_Admin where Id =" + id;
+            //        cmd.CommandType = CommandType.Text;
+            //        cmd.Connection = con;
+            //        SqlDataReader dr = cmd.ExecuteReader();// read from database
+            //        DataTable dt = new DataTable();
+            //        dt.Load(dr);// fill dt with data from dr
+            //        con.Close();
+            //        return dt;
+            //    }
+
+            //    public int UpdateOrganizer(int id, string name, string phone,
+            //string email, string password)
+            //    {
+            //        con.Open();
+            //        cmd.CommandText = "UpdteOrgAdmin";
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        cmd.Connection = con;
+            //        cmd.Parameters.Clear();///
+            //        cmd.Parameters.AddWithValue("@OrgID", id);
+            //        cmd.Parameters.AddWithValue("@OrgName", name);
+            //        cmd.Parameters.AddWithValue("@Email", email);
+            //        cmd.Parameters.AddWithValue("@OrgAdmPassword", password);
+            //        cmd.Parameters.AddWithValue("@Phone", phone);
+            //        int r = cmd.ExecuteNonQuery();
+
+            //        con.Close();
+            //        return r;
+            //    }
+
+            //    public int DeleteOrganizer(int id)
+            //    {
+            //        con.Open();
+            //        cmd.CommandText = "DeleteOrgAdmin";
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        cmd.Connection = con;
+            //        cmd.Parameters.Clear();
+            //        cmd.Parameters.AddWithValue("@Id", id);
+            //        int r = cmd.ExecuteNonQuery();
+            //        con.Close();
+            //        return r;
+            //    }
+
+
+
+
+        }
 }
-
