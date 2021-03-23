@@ -20,8 +20,8 @@ namespace WorkshopManger
         // ALL NEED TO BE FIX
         public void AddWorkshop(string title, DateTime date,
                      string duration, string presenter, 
-                     string seatsCount, string location,
-                     string description, string orgID)
+                     decimal seatsCount, string location,
+                     string description)
         {
             con.Open();
             cmd.CommandText = "AddNewWorkshop";//sproc name or tsql
@@ -33,7 +33,6 @@ namespace WorkshopManger
             cmd.Parameters.AddWithValue("@SeatsCount", seatsCount);
             cmd.Parameters.AddWithValue("@Location", location);
             cmd.Parameters.AddWithValue("@Description", description);
-            cmd.Parameters.AddWithValue("@orgID", orgID);
             cmd.Connection = con;// determin the connecton to command 
             cmd.ExecuteNonQuery();// execute tsql 
             con.Close();
@@ -67,7 +66,7 @@ namespace WorkshopManger
 
         public int UpdateWorkshop(int id, string title, DateTime date,
                      string duration, string presenter,
-                     string seatsCount, string location,
+                     decimal seatsCount, string location,
                      string description)
         {
             con.Open();

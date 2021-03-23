@@ -17,7 +17,18 @@ namespace WorkshopManger
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-           
+
+            Workshop workshop = new Workshop();
+            workshop.AddWorkshop(textBoxTitle.Text, dateTimePickerDate.Value, textBoxDuration.Text,
+                textBoxPresenter.Text, numericUpDownSeats.Value, textBoxLocation.Text, richTextBoxDesc.Text);
+            MessageBox.Show("Data Inserted successfully.");
+            textBoxTitle.Text = "";
+            dateTimePickerDate.Text = "";
+            textBoxDuration.Text = "";
+            textBoxPresenter.Text = "";
+            numericUpDownSeats.Text = "";
+            textBoxLocation.Text = "";
+            richTextBoxDesc.Text = "";
         }
     }
 }
