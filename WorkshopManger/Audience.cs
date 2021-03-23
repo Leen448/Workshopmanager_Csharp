@@ -50,65 +50,79 @@ namespace WorkshopManger
 
 
 
-            //    public DataTable GetAllOrganizer()
-            //    {
-            //        con.Open();
-            //        cmd.CommandText = "select * from Organaizer_Admin";
-            //        cmd.CommandType = CommandType.Text;
-            //        cmd.Connection = con;
-            //        SqlDataReader dr = cmd.ExecuteReader();// read from database
-            //        DataTable dt = new DataTable();
-            //        dt.Load(dr);// fill dt with data from dr
-            //        con.Close();
-            //        return dt;
-            //    }
-            //    public DataTable GetOrganizerById(int id)
-            //    {
-            //        con.Open();
-            //        cmd.CommandText = "select * from Organaizer_Admin where Id =" + id;
-            //        cmd.CommandType = CommandType.Text;
-            //        cmd.Connection = con;
-            //        SqlDataReader dr = cmd.ExecuteReader();// read from database
-            //        DataTable dt = new DataTable();
-            //        dt.Load(dr);// fill dt with data from dr
-            //        con.Close();
-            //        return dt;
-            //    }
+        //    public DataTable GetAllOrganizer()
+        //    {
+        //        con.Open();
+        //        cmd.CommandText = "select * from Organaizer_Admin";
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.Connection = con;
+        //        SqlDataReader dr = cmd.ExecuteReader();// read from database
+        //        DataTable dt = new DataTable();
+        //        dt.Load(dr);// fill dt with data from dr
+        //        con.Close();
+        //        return dt;
+        //    }
+        //    public DataTable GetOrganizerById(int id)
+        //    {
+        //        con.Open();
+        //        cmd.CommandText = "select * from Organaizer_Admin where Id =" + id;
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.Connection = con;
+        //        SqlDataReader dr = cmd.ExecuteReader();// read from database
+        //        DataTable dt = new DataTable();
+        //        dt.Load(dr);// fill dt with data from dr
+        //        con.Close();
+        //        return dt;
+        //    }
 
-            //    public int UpdateOrganizer(int id, string name, string phone,
-            //string email, string password)
-            //    {
-            //        con.Open();
-            //        cmd.CommandText = "UpdteOrgAdmin";
-            //        cmd.CommandType = CommandType.StoredProcedure;
-            //        cmd.Connection = con;
-            //        cmd.Parameters.Clear();///
-            //        cmd.Parameters.AddWithValue("@OrgID", id);
-            //        cmd.Parameters.AddWithValue("@OrgName", name);
-            //        cmd.Parameters.AddWithValue("@Email", email);
-            //        cmd.Parameters.AddWithValue("@OrgAdmPassword", password);
-            //        cmd.Parameters.AddWithValue("@Phone", phone);
-            //        int r = cmd.ExecuteNonQuery();
+        //    public int UpdateOrganizer(int id, string name, string phone,
+        //string email, string password)
+        //    {
+        //        con.Open();
+        //        cmd.CommandText = "UpdteOrgAdmin";
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Connection = con;
+        //        cmd.Parameters.Clear();///
+        //        cmd.Parameters.AddWithValue("@OrgID", id);
+        //        cmd.Parameters.AddWithValue("@OrgName", name);
+        //        cmd.Parameters.AddWithValue("@Email", email);
+        //        cmd.Parameters.AddWithValue("@OrgAdmPassword", password);
+        //        cmd.Parameters.AddWithValue("@Phone", phone);
+        //        int r = cmd.ExecuteNonQuery();
 
-            //        con.Close();
-            //        return r;
-            //    }
+        //        con.Close();
+        //        return r;
+        //    }
 
-            //    public int DeleteOrganizer(int id)
-            //    {
-            //        con.Open();
-            //        cmd.CommandText = "DeleteOrgAdmin";
-            //        cmd.CommandType = CommandType.StoredProcedure;
-            //        cmd.Connection = con;
-            //        cmd.Parameters.Clear();
-            //        cmd.Parameters.AddWithValue("@Id", id);
-            //        int r = cmd.ExecuteNonQuery();
-            //        con.Close();
-            //        return r;
-            //    }
+        //    public int DeleteOrganizer(int id)
+        //    {
+        //        con.Open();
+        //        cmd.CommandText = "DeleteOrgAdmin";
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Connection = con;
+        //        cmd.Parameters.Clear();
+        //        cmd.Parameters.AddWithValue("@Id", id);
+        //        int r = cmd.ExecuteNonQuery();
+        //        con.Close();
+        //        return r;
+        //    }
 
-
-
-
+        public int Regester(int Audid,int Wid,int OrgID)
+        {
+            con.Open();
+            cmd.CommandText = "NewRegistration";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+            cmd.Parameters.Clear();
+         
+            cmd.Parameters.AddWithValue("@audID", Audid);
+            cmd.Parameters.AddWithValue("@OrgID", OrgID);
+            cmd.Parameters.AddWithValue("@WorkshopID", Wid);
+            int r = cmd.ExecuteNonQuery();
+            con.Close();
+            return r;
         }
+
+
+    }
 }
