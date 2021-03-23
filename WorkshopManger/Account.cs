@@ -24,7 +24,7 @@ namespace WorkshopManger
         public static int AccountType { get; set; }
         public static int AccountId { get; set; }
 
-        public int CheckUserExists(string  _userEmail, string _password,int AccountType, out int AccountId)
+        public int CheckUserExists(string  _userEmail, string _password, int AccountType, out int AccountId)
         {
             con.Open();
             cmd.CommandText = "login_users";// proc name
@@ -43,26 +43,27 @@ namespace WorkshopManger
             if (cmd.Parameters["@Id"].Value != DBNull.Value)
             {
                 AccountId = (int)cmd.Parameters["@Id"].Value;
+
             }
-            else {
+            else
+            {
                 AccountId = 0;
             }
-            
             con.Close();
             return r;
         }
-        public DataTable GetUserById(int id)
+        public  DataTable GetUserById(int id, int TableNumber)
         {
-
             con.Open();
             cmd.CommandText = "UserInfo";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@TableNumber",TableNumber);
             SqlDataReader dr = cmd.ExecuteReader();// read from database
             DataTable dt = new DataTable();
-            dt.Load(dr);// fill dt with data from dr
+            dt.Load(dr); //fill dt with data from dr
             con.Close();
             return dt;
         }
