@@ -13,25 +13,56 @@ namespace WorkshopManger
         public AdminHome()
         {
             InitializeComponent();
+            MyProfile_Click();
         }
 
-        private void AdminHome_Load(object sender, EventArgs e)
+        private void ManageOrgnaizer_Click(object sender, EventArgs e)
         {
+            ManageOrganizer MOrg = new ManageOrganizer();
+            MOrg.Tag = this;
+            MOrg.Show(this);
+            Hide();
+        }
+
+        private void AddNewOrg_Click(object sender, EventArgs e)
+        {
+            AddOrganizer AddNewOrg = new AddOrganizer();
+            AddNewOrg.Tag = this;
+            AddNewOrg.Show(this);
+            Hide();
+        }
+
+
+        private void ViewWorkshop_Click(object sender, EventArgs e)
+        {
+
+
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void ViewAudience_Click(object sender, EventArgs e)
         {
+
+            ViewAudience ViewAud = new ViewAudience();
+            ViewAud.Tag = this;
+            ViewAud.Show(this);
+            Hide();
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void MyProfile_Click()
         {
 
-        }
+            int Id = Account.AccountId;
+            int tableNumber = Account.AccountType;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+            DataTable DT = new Account().GetUserById(Id, tableNumber);
+            DataRow row = DT.Rows[0];
+            FNametextBox.Text = row["FName"].ToString();
+            LNametextBox.Text = row["LName"].ToString();
+            EmailtextBox.Text = row["Email"].ToString();
+            PhonetextBox.Text = row["Phone"].ToString();
+            PasswordtextBox.Text = row["UserPassword"].ToString();
 
         }
     }
