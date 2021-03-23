@@ -14,5 +14,31 @@ namespace WorkshopManger
         {
             InitializeComponent();
         }
+
+        private void buttonViewWorkshop_Click(object sender, EventArgs e)
+        {
+            ViewWorkshop vw = new ViewWorkshop();
+            vw.Tag = this;
+            vw.Show(this);
+            Hide();
+        }
+
+        private void buttonAddNewWorkshop_Click(object sender, EventArgs e)
+        {
+            AddWorkshop aw = new AddWorkshop();
+            aw.Tag = this;
+            aw.Show(this);
+            Hide();
+        }
+
+        private void buttonViewAud_Click(object sender, EventArgs e)
+        {
+            ViewAudience va = new ViewAudience();
+            va.Tag = this;
+            va.Show(this);
+            Hide();
+        }
+
+
     }
 }

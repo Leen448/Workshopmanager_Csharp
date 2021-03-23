@@ -33,15 +33,15 @@ namespace WorkshopManger
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button8 = new System.Windows.Forms.Button();
+            this.buttonAddNewWorkshop = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonStatWorkshop = new System.Windows.Forms.Button();
+            this.buttonViewWorkshop = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonTakeAtt = new System.Windows.Forms.Button();
+            this.buttonStatAud = new System.Windows.Forms.Button();
+            this.buttonViewAud = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.logouttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -70,21 +70,22 @@ namespace WorkshopManger
             this.contextMenuStrip4.Name = "contextMenuStrip4";
             this.contextMenuStrip4.Size = new System.Drawing.Size(61, 4);
             // 
-            // button8
+            // buttonAddNewWorkshop
             // 
-            this.button8.Location = new System.Drawing.Point(248, 56);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(200, 22);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Add New Workshop";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonAddNewWorkshop.Location = new System.Drawing.Point(248, 56);
+            this.buttonAddNewWorkshop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAddNewWorkshop.Name = "buttonAddNewWorkshop";
+            this.buttonAddNewWorkshop.Size = new System.Drawing.Size(200, 22);
+            this.buttonAddNewWorkshop.TabIndex = 6;
+            this.buttonAddNewWorkshop.Text = "Add New Workshop";
+            this.buttonAddNewWorkshop.UseVisualStyleBackColor = true;
+            this.buttonAddNewWorkshop.Click += new System.EventHandler(this.buttonAddNewWorkshop_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.buttonAddNewWorkshop);
+            this.groupBox3.Controls.Add(this.buttonStatWorkshop);
+            this.groupBox3.Controls.Add(this.buttonViewWorkshop);
             this.groupBox3.Location = new System.Drawing.Point(3, 2);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
@@ -94,25 +95,26 @@ namespace WorkshopManger
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Workshop";
             // 
-            // button4
+            // buttonStatWorkshop
             // 
-            this.button4.Location = new System.Drawing.Point(470, 56);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 22);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Statistics";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonStatWorkshop.Location = new System.Drawing.Point(470, 56);
+            this.buttonStatWorkshop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonStatWorkshop.Name = "buttonStatWorkshop";
+            this.buttonStatWorkshop.Size = new System.Drawing.Size(200, 22);
+            this.buttonStatWorkshop.TabIndex = 5;
+            this.buttonStatWorkshop.Text = "Statistics";
+            this.buttonStatWorkshop.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonViewWorkshop
             // 
-            this.button6.Location = new System.Drawing.Point(24, 56);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 22);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "View Workshop";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonViewWorkshop.Location = new System.Drawing.Point(24, 56);
+            this.buttonViewWorkshop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonViewWorkshop.Name = "buttonViewWorkshop";
+            this.buttonViewWorkshop.Size = new System.Drawing.Size(200, 22);
+            this.buttonViewWorkshop.TabIndex = 3;
+            this.buttonViewWorkshop.Text = "View Workshop";
+            this.buttonViewWorkshop.UseVisualStyleBackColor = true;
+            this.buttonViewWorkshop.Click += new System.EventHandler(this.buttonViewWorkshop_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -127,9 +129,9 @@ namespace WorkshopManger
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.buttonTakeAtt);
+            this.groupBox1.Controls.Add(this.buttonStatAud);
+            this.groupBox1.Controls.Add(this.buttonViewAud);
             this.groupBox1.Location = new System.Drawing.Point(3, 138);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -139,35 +141,36 @@ namespace WorkshopManger
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Audience";
             // 
-            // button9
+            // buttonTakeAtt
             // 
-            this.button9.Location = new System.Drawing.Point(248, 56);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 22);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Take Attendance";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonTakeAtt.Location = new System.Drawing.Point(248, 56);
+            this.buttonTakeAtt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonTakeAtt.Name = "buttonTakeAtt";
+            this.buttonTakeAtt.Size = new System.Drawing.Size(200, 22);
+            this.buttonTakeAtt.TabIndex = 6;
+            this.buttonTakeAtt.Text = "Take Attendance";
+            this.buttonTakeAtt.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonStatAud
             // 
-            this.button5.Location = new System.Drawing.Point(470, 56);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 22);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Statistics";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonStatAud.Location = new System.Drawing.Point(470, 56);
+            this.buttonStatAud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonStatAud.Name = "buttonStatAud";
+            this.buttonStatAud.Size = new System.Drawing.Size(200, 22);
+            this.buttonStatAud.TabIndex = 5;
+            this.buttonStatAud.Text = "Statistics";
+            this.buttonStatAud.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // buttonViewAud
             // 
-            this.button7.Location = new System.Drawing.Point(24, 56);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 22);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "View Audience";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonViewAud.Location = new System.Drawing.Point(24, 56);
+            this.buttonViewAud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonViewAud.Name = "buttonViewAud";
+            this.buttonViewAud.Size = new System.Drawing.Size(200, 22);
+            this.buttonViewAud.TabIndex = 3;
+            this.buttonViewAud.Text = "View Audience";
+            this.buttonViewAud.UseVisualStyleBackColor = true;
+            this.buttonViewAud.Click += new System.EventHandler(this.buttonViewAud_Click);
             // 
             // contextMenuStrip2
             // 
@@ -224,15 +227,15 @@ namespace WorkshopManger
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button buttonAddNewWorkshop;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonStatWorkshop;
+        private System.Windows.Forms.Button buttonViewWorkshop;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button buttonTakeAtt;
+        private System.Windows.Forms.Button buttonStatAud;
+        private System.Windows.Forms.Button buttonViewAud;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem logouttoolStripMenuItem1;
         private System.Windows.Forms.MenuStrip menuStrip1;
