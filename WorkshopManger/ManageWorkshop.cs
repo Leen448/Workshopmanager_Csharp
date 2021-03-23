@@ -67,12 +67,12 @@ namespace WorkshopManger
             DataTable dt = workshop.GetWorkshopById(r);
             DataRow row = dt.Rows[0];
             textBoxTitle.Text = row["Title"].ToString();
-            dateTimePickerDate.Text = row["Date"].ToString();
+            dateTimePickerDate.Text = row["WDate"].ToString();
             textBoxDuration.Text = row["Duration"].ToString();
             textBoxPresenter.Text = row["Presenter"].ToString();
             numericUpDownSeats.Text = row["SeatsCount"].ToString();
-            textBoxLocation.Text = row["Location"].ToString();
-            richTextBoxDesc.Text = row["Description"].ToString();
+            textBoxLocation.Text = row["WLocation"].ToString();
+            richTextBoxDesc.Text = row["WDescription"].ToString();
 
         }
 
