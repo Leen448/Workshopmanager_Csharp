@@ -13,7 +13,8 @@ namespace WorkshopManger
         public Workshop()
         {
             // default constructor
-            con = new SqlConnection("data source=.;database=WorkshopDB;integrated security=true;");
+            // con = new SqlConnection("data source=.;database=WorkshopDB;integrated security=true;");
+            con = new SqlConnection("data source=LEEN-DESKTOP\\MSSQLSERVER01;database=WorkshopDB;integrated security=true;");
             cmd = new SqlCommand();
         }
 
