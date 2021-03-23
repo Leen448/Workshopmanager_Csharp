@@ -26,28 +26,38 @@ namespace WorkshopManger
 
 
             Account account = new Account();
-           // account.CheckUserExists(txtUserName.Text, txtPassord.Text, slected_index, out UId);
+        
 
             if (account.CheckUserExists(txtUserName.Text, txtPassord.Text, slected_index, out UId) != 0)
             {
+                Account.AccountId = UId;
                 switch (slected_index) {
-                    case 0: AudienceHome aud = new AudienceHome();
+                    case 0:
+                        Account.AccountType = 0;
+                        AudienceHome aud = new AudienceHome();
                             aud.Tag = this;
                             aud.Show(this);
                             Hide();
 
                         break;
-                    case 1: OrganizerAdminHome Orgadmin = new OrganizerAdminHome();
+                    case 1:
+                        Account.AccountType = 1;
+                        OrganizerAdminHome Orgadmin = new OrganizerAdminHome();
                             Orgadmin.Tag = this;
                             Orgadmin.Show(this);
                             Hide();
                         break;
-                    case 2: OrgnaizerEmpHome OrgEmp = new OrgnaizerEmpHome();
+                    case 2:
+                        Account.AccountType = 2;
+                        OrgnaizerEmpHome OrgEmp = new OrgnaizerEmpHome();
                             OrgEmp.Tag = this;
                             OrgEmp.Show(this);
                             Hide();
                         break;
-                    case 3:AdminHome admin = new AdminHome();
+                    case 3:
+
+                        Account.AccountType = 3;
+                        AdminHome admin = new AdminHome();
                             admin.Tag = this;
                             admin.Show(this);
                             Hide();
@@ -69,7 +79,6 @@ namespace WorkshopManger
 
         private void GoToLogin_Click(object sender, EventArgs e)
         {
-          
             signup Form = new signup();
             Form.Tag = this;
             Form.Show(this);
