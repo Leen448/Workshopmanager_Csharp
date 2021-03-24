@@ -1,7 +1,7 @@
 ﻿
 namespace WorkshopManger
 {
-    partial class Form1
+    partial class AddEmp
     {
         /// <summary>
         /// Required designer variable.
