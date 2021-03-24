@@ -123,9 +123,10 @@ namespace WorkshopManger
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
             this.flowLayoutPanel1.Controls.Add(this.groupBox3);
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(807, 554);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(706, 416);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // groupBox2
@@ -133,27 +134,31 @@ namespace WorkshopManger
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.AddNewOrg);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Location = new System.Drawing.Point(3, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(794, 176);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(695, 132);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Orgnizer";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(537, 60);
+            this.button3.Location = new System.Drawing.Point(470, 45);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(228, 29);
+            this.button3.Size = new System.Drawing.Size(200, 22);
             this.button3.TabIndex = 2;
             this.button3.Text = "Statistics";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // AddNewOrg
             // 
-            this.AddNewOrg.Location = new System.Drawing.Point(287, 60);
+            this.AddNewOrg.Location = new System.Drawing.Point(251, 45);
+            this.AddNewOrg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddNewOrg.Name = "AddNewOrg";
-            this.AddNewOrg.Size = new System.Drawing.Size(228, 29);
+            this.AddNewOrg.Size = new System.Drawing.Size(200, 22);
             this.AddNewOrg.TabIndex = 1;
             this.AddNewOrg.Text = "Add New Orgnizer";
             this.AddNewOrg.UseVisualStyleBackColor = true;
@@ -161,9 +166,10 @@ namespace WorkshopManger
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 60);
+            this.button1.Location = new System.Drawing.Point(22, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 29);
+            this.button1.Size = new System.Drawing.Size(200, 22);
             this.button1.TabIndex = 0;
             this.button1.Text = "Manage  Organizers";
             this.button1.UseVisualStyleBackColor = true;
@@ -173,27 +179,31 @@ namespace WorkshopManger
             // 
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.ViewWorkshop);
-            this.groupBox3.Location = new System.Drawing.Point(3, 185);
+            this.groupBox3.Location = new System.Drawing.Point(3, 138);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(794, 176);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(695, 132);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Workshop";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(287, 74);
+            this.button4.Location = new System.Drawing.Point(251, 56);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(228, 29);
+            this.button4.Size = new System.Drawing.Size(200, 22);
             this.button4.TabIndex = 5;
             this.button4.Text = "Statistics";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // ViewWorkshop
             // 
-            this.ViewWorkshop.Location = new System.Drawing.Point(27, 74);
+            this.ViewWorkshop.Location = new System.Drawing.Point(24, 56);
+            this.ViewWorkshop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ViewWorkshop.Name = "ViewWorkshop";
-            this.ViewWorkshop.Size = new System.Drawing.Size(228, 29);
+            this.ViewWorkshop.Size = new System.Drawing.Size(200, 22);
             this.ViewWorkshop.TabIndex = 3;
             this.ViewWorkshop.Text = "View Workshop";
             this.ViewWorkshop.UseVisualStyleBackColor = true;
@@ -203,27 +213,31 @@ namespace WorkshopManger
             // 
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Location = new System.Drawing.Point(3, 367);
+            this.groupBox1.Location = new System.Drawing.Point(3, 274);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(794, 176);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(695, 132);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Audience";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(287, 74);
+            this.button5.Location = new System.Drawing.Point(251, 56);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(228, 29);
+            this.button5.Size = new System.Drawing.Size(200, 22);
             this.button5.TabIndex = 5;
             this.button5.Text = "Statistics";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(27, 74);
+            this.button7.Location = new System.Drawing.Point(24, 56);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(228, 29);
+            this.button7.Size = new System.Drawing.Size(200, 22);
             this.button7.TabIndex = 3;
             this.button7.Text = "View Audience";
             this.button7.UseVisualStyleBackColor = true;
@@ -403,18 +417,20 @@ namespace WorkshopManger
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.MyProfile);
             this.tabControl1.Location = new System.Drawing.Point(3, -2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(822, 588);
+            this.tabControl1.Size = new System.Drawing.Size(719, 441);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(814, 555);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(711, 413);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -432,99 +448,106 @@ namespace WorkshopManger
             this.MyProfile.Controls.Add(this.label2);
             this.MyProfile.Controls.Add(this.FNametextBox);
             this.MyProfile.Controls.Add(this.label1);
-            this.MyProfile.Location = new System.Drawing.Point(4, 29);
+            this.MyProfile.Location = new System.Drawing.Point(4, 24);
+            this.MyProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MyProfile.Name = "MyProfile";
-            this.MyProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.MyProfile.Size = new System.Drawing.Size(814, 555);
+            this.MyProfile.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MyProfile.Size = new System.Drawing.Size(711, 413);
             this.MyProfile.TabIndex = 1;
             this.MyProfile.Text = "My Profile";
             // 
             // PasswordtextBox
             // 
-            this.PasswordtextBox.Location = new System.Drawing.Point(146, 367);
+            this.PasswordtextBox.Location = new System.Drawing.Point(128, 275);
+            this.PasswordtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordtextBox.Name = "PasswordtextBox";
-            this.PasswordtextBox.Size = new System.Drawing.Size(539, 27);
+            this.PasswordtextBox.Size = new System.Drawing.Size(472, 23);
             this.PasswordtextBox.TabIndex = 9;
             // 
             // EmailtextBox
             // 
-            this.EmailtextBox.Location = new System.Drawing.Point(146, 291);
+            this.EmailtextBox.Location = new System.Drawing.Point(128, 218);
+            this.EmailtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(539, 27);
+            this.EmailtextBox.Size = new System.Drawing.Size(472, 23);
             this.EmailtextBox.TabIndex = 8;
             // 
             // PhonetextBox
             // 
-            this.PhonetextBox.Location = new System.Drawing.Point(146, 214);
+            this.PhonetextBox.Location = new System.Drawing.Point(128, 160);
+            this.PhonetextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PhonetextBox.Name = "PhonetextBox";
-            this.PhonetextBox.Size = new System.Drawing.Size(539, 27);
+            this.PhonetextBox.Size = new System.Drawing.Size(472, 23);
             this.PhonetextBox.TabIndex = 7;
             // 
             // LNametextBox
             // 
-            this.LNametextBox.Location = new System.Drawing.Point(146, 142);
+            this.LNametextBox.Location = new System.Drawing.Point(128, 106);
+            this.LNametextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LNametextBox.Name = "LNametextBox";
-            this.LNametextBox.Size = new System.Drawing.Size(539, 27);
+            this.LNametextBox.Size = new System.Drawing.Size(472, 23);
             this.LNametextBox.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 370);
+            this.label5.Location = new System.Drawing.Point(41, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 5;
             this.label5.Text = "Password";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 294);
+            this.label4.Location = new System.Drawing.Point(41, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.Size = new System.Drawing.Size(36, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 217);
+            this.label3.Location = new System.Drawing.Point(41, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.Size = new System.Drawing.Size(41, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "Phone";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 142);
+            this.label2.Location = new System.Drawing.Point(41, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Last Name";
             // 
             // FNametextBox
             // 
-            this.FNametextBox.Location = new System.Drawing.Point(146, 64);
+            this.FNametextBox.Location = new System.Drawing.Point(128, 48);
+            this.FNametextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FNametextBox.Name = "FNametextBox";
-            this.FNametextBox.Size = new System.Drawing.Size(539, 27);
+            this.FNametextBox.Size = new System.Drawing.Size(472, 23);
             this.FNametextBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 67);
+            this.label1.Location = new System.Drawing.Point(41, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(64, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             // 
             // AdminHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 598);
+            this.ClientSize = new System.Drawing.Size(723, 448);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminHome";
             this.Text = "AdminHome";
             this.flowLayoutPanel1.ResumeLayout(false);
