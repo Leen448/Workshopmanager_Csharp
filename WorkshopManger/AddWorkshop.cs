@@ -18,9 +18,18 @@ namespace WorkshopManger
         private void buttonAdd_Click(object sender, EventArgs e)
         {
 
-            OrgEmployee emp = new OrgEmployee();
-            int OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
-            
+          
+            int OrgID=0;
+
+            if (Account.AccountType == 2)
+            {
+                OrgEmployee emp = new OrgEmployee();
+                OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
+            }
+            else if (Account.AccountType == 1) {
+                OrgID = Account.AccountId;
+            }
+
             Workshop workshop = new Workshop();
             workshop.AddWorkshop(textBoxTitle.Text, dateTimePickerDate.Value, textBoxDuration.Text,
                 textBoxPresenter.Text, numericUpDownSeats.Value, textBoxLocation.Text, richTextBoxDesc.Text, OrgID);
