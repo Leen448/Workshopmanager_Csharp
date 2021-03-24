@@ -13,6 +13,7 @@ namespace WorkshopManger
         public OrganizerAdminHome()
         {
             InitializeComponent();
+            MyProfile_Click();
         }
 
         private void Manage_Employees_button_Click(object sender, EventArgs e)
@@ -55,5 +56,35 @@ namespace WorkshopManger
             Hide();
 
         }
+        private void MyProfile_Click()
+        {
+
+            int Id = Account.AccountId;
+            int tableNumber = Account.AccountType;
+
+            DataTable DT = new Account().GetUserById(Id, tableNumber);
+            DataRow row = DT.Rows[0];
+            NameTextBox.Text = row["OrgName"].ToString();
+            EmailtextBox.Text = row["Email"].ToString();
+            PhonetextBox.Text = row["Phone"].ToString();
+            PasswordtextBox.Text = row["OrgAdmPassword"].ToString();
+
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            int Id = Account.AccountId;
+            Organizer org = new Organizer();
+            int result = org.UpdateOrganizer(Id, NameTextBox.Text, PhonetextBox.Text, EmailtextBox.Text, PasswordtextBox.Text);
+            if (result != 0)
+            {
+                MessageBox.Show("Data Updated Successfully.");
+                MyProfile_Click();
+
+            }
+        }
+
+
+
     }
 }
