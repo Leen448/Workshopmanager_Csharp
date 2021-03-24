@@ -20,7 +20,7 @@ namespace WorkshopManger
         }
 
         public static int AudiencerId { get; set; }
-        public int AudienceSignUp(string Fname,string Lname, string phone,string email, string password )
+        public int AudienceSignUp(string Fname, string Lname, string phone, string email, string password)
         {
             con.Open();
             cmd.CommandText = "SignUp_Audience";//sproc name or tsql
@@ -45,11 +45,76 @@ namespace WorkshopManger
         }
 
 
+        public int UpdateAud(int id, string Fname, string Lname, string phone, string email, string password)
+        {
+            con.Open();
+            cmd.CommandText = "UpdateAudience";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+            cmd.Parameters.Clear();///
+            cmd.Parameters.AddWithValue("@ID", id);
+            cmd.Parameters.AddWithValue("@FName", Fname);
+            cmd.Parameters.AddWithValue("@LName", Lname);
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@AudPassword", password);
+            cmd.Parameters.AddWithValue("@Phone", phone);
+            int r = cmd.ExecuteNonQuery();
+
+            con.Close();
+            return r;
+        }
 
 
 
 
 
+        //public int Regester(int Audid, int Wid, int OrgID)
+        //{
+        //    con.Open();
+        //    cmd.CommandText = "NewRegistration";
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Connection = con;
+        //    cmd.Parameters.Clear();
+
+        //    cmd.Parameters.AddWithValue("@audID", Audid);
+        //    cmd.Parameters.AddWithValue("@OrgID", OrgID);
+        //    cmd.Parameters.AddWithValue("@WorkshopID", Wid);
+        //    int r = cmd.ExecuteNonQuery();
+        //    con.Close();
+        //    return r;
+        //}
+
+
+
+        //public int DeleteRegistration(int Audid, int Wid)
+        //{
+        //    con.Open();
+        //    cmd.CommandText = "DeleteRegistration";
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Connection = con;
+        //    cmd.Parameters.Clear();
+
+        //    cmd.Parameters.AddWithValue("@audID", Audid);
+        //    cmd.Parameters.AddWithValue("@WorkshopID", Wid);
+        //    int r = cmd.ExecuteNonQuery();
+        //    con.Close();
+        //    return r;
+        //}
+
+
+
+        //    public int DeleteOrganizer(int id)
+        //    {
+        //        con.Open();
+        //        cmd.CommandText = "DeleteOrgAdmin";
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Connection = con;
+        //        cmd.Parameters.Clear();
+        //        cmd.Parameters.AddWithValue("@Id", id);
+        //        int r = cmd.ExecuteNonQuery();
+        //        con.Close();
+        //        return r;
+        //    }
         //    public DataTable GetAllOrganizer()
         //    {
         //        con.Open();
@@ -75,53 +140,6 @@ namespace WorkshopManger
         //        return dt;
         //    }
 
-        //    public int UpdateOrganizer(int id, string name, string phone,
-        //string email, string password)
-        //    {
-        //        con.Open();
-        //        cmd.CommandText = "UpdteOrgAdmin";
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        cmd.Connection = con;
-        //        cmd.Parameters.Clear();///
-        //        cmd.Parameters.AddWithValue("@OrgID", id);
-        //        cmd.Parameters.AddWithValue("@OrgName", name);
-        //        cmd.Parameters.AddWithValue("@Email", email);
-        //        cmd.Parameters.AddWithValue("@OrgAdmPassword", password);
-        //        cmd.Parameters.AddWithValue("@Phone", phone);
-        //        int r = cmd.ExecuteNonQuery();
-
-        //        con.Close();
-        //        return r;
-        //    }
-
-        //    public int DeleteOrganizer(int id)
-        //    {
-        //        con.Open();
-        //        cmd.CommandText = "DeleteOrgAdmin";
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        cmd.Connection = con;
-        //        cmd.Parameters.Clear();
-        //        cmd.Parameters.AddWithValue("@Id", id);
-        //        int r = cmd.ExecuteNonQuery();
-        //        con.Close();
-        //        return r;
-        //    }
-
-        public int Regester(int Audid,int Wid,int OrgID)
-        {
-            con.Open();
-            cmd.CommandText = "NewRegistration";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = con;
-            cmd.Parameters.Clear();
-         
-            cmd.Parameters.AddWithValue("@audID", Audid);
-            cmd.Parameters.AddWithValue("@OrgID", OrgID);
-            cmd.Parameters.AddWithValue("@WorkshopID", Wid);
-            int r = cmd.ExecuteNonQuery();
-            con.Close();
-            return r;
-        }
 
 
     }
