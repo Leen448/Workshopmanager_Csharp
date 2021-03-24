@@ -1,25 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
     <Compile Update="AddEmp.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< Updated upstream
+    <Compile Update="AddOrganizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AddWorkshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
-=======
-<<<<<<< HEAD
-=======
-    <Compile Update="AdminHome.cs">
+    <Compile Update="Audience.cs">
       <SubType>Form</SubType>
     </Compile>
->>>>>>> 7db3a2cd12deb497af207912fd7ff51e9f4e5caa
->>>>>>> Stashed changes
-    <Compile Update="FRM_Login.cs">
+    <Compile Update="AudienceHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManageEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManageOrganizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManageWorkshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OrganizerAdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OrgnaizerEmpHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="User_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ViewAudience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ViewWorkshop.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
