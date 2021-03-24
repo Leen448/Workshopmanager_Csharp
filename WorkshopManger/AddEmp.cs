@@ -17,11 +17,9 @@ namespace WorkshopManger
 
         private void buttonAddNewEmp_Click(object sender, EventArgs e)
         {
-            
-
+           
             OrgEmployee oe = new OrgEmployee();
-            oe.AddEmp(FName_textbox.Text, LName_textbox.Text, Phone_textbox.Text,
-                Email_textbox.Text, Password_textbox.Text);
+            oe.AddEmp(FName_textbox.Text, LName_textbox.Text, Phone_textbox.Text,Email_textbox.Text, Password_textbox.Text, Account.AccountId);
             MessageBox.Show("Data Inserted successfully.");
             FName_textbox.Text = "";
             LName_textbox.Text = "";
