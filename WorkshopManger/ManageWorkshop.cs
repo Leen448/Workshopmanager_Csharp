@@ -29,19 +29,43 @@ namespace WorkshopManger
 
         private void LoadData()
         {
-            int OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
-            MessageBox.Show("OrgID:" + OrgID);
-            DataTable data = workshop.GetAllOrgWorkshops(OrgID);
-            if (data.Rows.Count != 0)
+            if (Account.AccountType == 2)
             {
-                dgvWorkshop.DataSource = data;
+                int OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
+                DataTable data = workshop.GetAllOrgWorkshops(OrgID);
+                if (data.Rows.Count != 0)
+                {
+                    dgvWorkshop.DataSource = data;
+                }
             }
+            else if(Account.AccountType == 1)
+            {
+
+                DataTable data = workshop.GetAllOrgWorkshops(Account.AccountId);
+                if (data.Rows.Count != 0)
+                {
+                    dgvWorkshop.DataSource = data;
+                }
+            }
+
+            
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             // call to UpdateCustomer Function
+            int OrgID=0;
 
-            int OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
+            if (Account.AccountType == 2)
+            {
+                OrgID= emp.GetOrgIdByEmpId(Account.AccountId);
+
+
+            }
+            else if (Account.AccountType == 1) {
+                OrgID=Account.AccountId;
+
+            }
+
             int result = workshop.UpdateWorkshop(r, textBoxTitle.Text, dateTimePickerDate.Value, textBoxDuration.Text,
                  textBoxPresenter.Text, numericUpDownSeats.Value, textBoxLocation.Text, richTextBoxDesc.Text, OrgID);
 
@@ -70,14 +94,22 @@ namespace WorkshopManger
             //GetCustomerById
             r = (int)dgvWorkshop.CurrentRow.Cells[0].Value;
             DataTable dt = workshop.GetWorkshopById(r);
-            DataRow row = dt.Rows[0];
-            textBoxTitle.Text = row["Title"].ToString();
-            dateTimePickerDate.Value = DateTime.Parse(row["WDate"].ToString());
-            textBoxDuration.Text = row["Duration"].ToString();
-            textBoxPresenter.Text = row["Presenter"].ToString();
-            numericUpDownSeats.Text = row["SeatsCount"].ToString();
-            textBoxLocation.Text = row["WLocation"].ToString();
-            richTextBoxDesc.Text = row["WDescription"].ToString();
+
+            if (dt.Rows.Count != 0)
+            {
+                DataRow row = dt.Rows[0];
+                textBoxTitle.Text = row["Title"].ToString();
+                dateTimePickerDate.Value = DateTime.Parse(row["WDate"].ToString());
+                textBoxDuration.Text = row["Duration"].ToString();
+                textBoxPresenter.Text = row["Presenter"].ToString();
+                numericUpDownSeats.Text = row["SeatsCount"].ToString();
+                textBoxLocation.Text = row["WLocation"].ToString();
+                richTextBoxDesc.Text = row["WDescription"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("There is no data");
+            }
 
         }
 
