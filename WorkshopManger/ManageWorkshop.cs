@@ -12,10 +12,12 @@ namespace WorkshopManger
     {
 
         Workshop workshop = new Workshop();
-
+        OrgEmployee emp = new OrgEmployee();
+      
         public ManageWorkshop()
         {
             InitializeComponent();
+
         }
         private void FRM_ManageWorkshop_Load(object sender, EventArgs e)
         {
@@ -27,7 +29,9 @@ namespace WorkshopManger
 
         private void LoadData()
         {
-            DataTable data = workshop.GetAllWorkshop();
+            int OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
+            MessageBox.Show("OrgID:" + OrgID);
+            DataTable data = workshop.GetAllOrgWorkshops(OrgID);
             if (data.Rows.Count != 0)
             {
                 dgvWorkshop.DataSource = data;
@@ -36,9 +40,10 @@ namespace WorkshopManger
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             // call to UpdateCustomer Function
-            int result = workshop.UpdateWorkshop(r, textBoxTitle.Text, dateTimePickerDate.Value, textBoxDuration.Text,
-                 textBoxPresenter.Text, numericUpDownSeats.Value, textBoxLocation.Text, richTextBoxDesc.Text);
 
+            int OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
+            int result = workshop.UpdateWorkshop(r, textBoxTitle.Text, dateTimePickerDate.Value, textBoxDuration.Text,
+                 textBoxPresenter.Text, numericUpDownSeats.Value, textBoxLocation.Text, richTextBoxDesc.Text, OrgID);
 
             if (result != 0)
             {
@@ -67,7 +72,7 @@ namespace WorkshopManger
             DataTable dt = workshop.GetWorkshopById(r);
             DataRow row = dt.Rows[0];
             textBoxTitle.Text = row["Title"].ToString();
-            dateTimePickerDate.Text = row["WDate"].ToString();
+            dateTimePickerDate.Value = DateTime.Parse(row["WDate"].ToString());
             textBoxDuration.Text = row["Duration"].ToString();
             textBoxPresenter.Text = row["Presenter"].ToString();
             numericUpDownSeats.Text = row["SeatsCount"].ToString();

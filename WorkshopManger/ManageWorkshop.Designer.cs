@@ -239,6 +239,7 @@ namespace WorkshopManger
             this.Text = "ManageWorkshop";
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkshop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeats)).EndInit();
+            this.Load += new System.EventHandler(this.FRM_ManageWorkshop_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
