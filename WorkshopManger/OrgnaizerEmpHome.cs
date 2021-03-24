@@ -17,9 +17,9 @@ namespace WorkshopManger
 
         private void buttonViewWorkshop_Click(object sender, EventArgs e)
         {
-            ViewWorkshop vw = new ViewWorkshop();
-            vw.Tag = this;
-            vw.Show(this);
+            ManageWorkshop Mw = new ManageWorkshop();
+            Mw.Tag = this;
+            Mw.Show(this);
             Hide();
         }
 
