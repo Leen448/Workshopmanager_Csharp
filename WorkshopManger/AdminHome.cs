@@ -36,6 +36,10 @@ namespace WorkshopManger
         private void ViewWorkshop_Click(object sender, EventArgs e)
         {
 
+            ViewWorkshop vws = new ViewWorkshop();
+            vws.Tag = this;
+            vws.Show(this);
+            Hide();
 
 
         }
@@ -49,6 +53,19 @@ namespace WorkshopManger
             Hide();
 
         }
+
+
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Account.AccountId = -1;
+            Account.AccountType = -1;
+            User_Login user = new User_Login();
+            user.Tag = this;
+            user.Show(this);
+            Hide();
+        }
+
 
         private void MyProfile_Click()
         {
@@ -65,5 +82,6 @@ namespace WorkshopManger
             PasswordtextBox.Text = row["UserPassword"].ToString();
 
         }
+
     }
 }
