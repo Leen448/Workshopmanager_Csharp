@@ -13,6 +13,7 @@ namespace WorkshopManger
         public OrgnaizerEmpHome()
         {
             InitializeComponent();
+            MyProfile_Click();
         }
 
         private void buttonViewWorkshop_Click(object sender, EventArgs e)
@@ -39,6 +40,54 @@ namespace WorkshopManger
             Hide();
         }
 
+        private void buttonTakeAtt_Click(object sender, EventArgs e)
+        {
+            Attendance att = new Attendance();
+            att.Tag = this;
+            att.Show(this);
+            Hide();
+        }
+
+        private void MyProfile_Click()
+        {
+
+            int Id = Account.AccountId;
+            int tableNumber = Account.AccountType;
+
+            DataTable DT = new Account().GetUserById(Id, tableNumber);
+            DataRow row = DT.Rows[0];
+            FNametextBox.Text = row["FName"].ToString();
+            LNametextBox.Text = row["LName"].ToString();
+            EmailtextBox.Text = row["Email"].ToString();
+            PhonetextBox.Text = row["Phone"].ToString();
+            PasswordtextBox.Text = row["EmpPassword"].ToString();
+
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            int Id = Account.AccountId;
+            OrgEmployee emp = new OrgEmployee();
+            int result = emp.UpdateEmpinfo(Id, FNametextBox.Text, LNametextBox.Text, PhonetextBox.Text, EmailtextBox.Text, PasswordtextBox.Text);
+            if (result != 0)
+            {
+                MessageBox.Show("Data Updated Successfully.");
+                MyProfile_Click();
+
+            }
+        }
+
+
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Account.AccountId = -1;
+            Account.AccountType = -1;
+            User_Login user = new User_Login();
+            user.Tag = this;
+            user.Show(this);
+            Hide();
+        }
 
     }
 }
