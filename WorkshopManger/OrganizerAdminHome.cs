@@ -84,7 +84,25 @@ namespace WorkshopManger
             }
         }
 
+        private void Take_Attendance_button_Click(object sender, EventArgs e)
+        {
+            Attendance att = new Attendance();
+            att.Tag = this;
+            att.Show(this);
+            Hide();
+        }
 
+
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Account.AccountId = -1;
+            Account.AccountType = -1;
+            User_Login user = new User_Login();
+            user.Tag = this;
+            user.Show(this);
+            Hide();
+        }
 
     }
 }
