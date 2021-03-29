@@ -78,7 +78,7 @@ namespace WorkshopManger
                             "where Registration.OrganaizerID="+OrgID;
                     break;
                 case 3:
-                    Query = "Select * from Workshop";
+                    Query = "Select * from Audience";
                     break;
             }
 
