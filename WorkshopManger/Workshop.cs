@@ -44,10 +44,10 @@ namespace WorkshopManger
         }
 
 
-        public DataTable GetAllWorkshop()
+        public DataTable GetAllWorkshop(String quere)
         {
             con.Open();
-            cmd.CommandText = "Select * from Workshop";
+            cmd.CommandText = quere;
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con;
             cmd.Parameters.Clear();
