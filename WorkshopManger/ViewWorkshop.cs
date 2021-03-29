@@ -28,7 +28,35 @@ namespace WorkshopManger
         private void ViewWorkshop_Load(object sender, EventArgs e)
         {
             Workshop ws = new Workshop();
-            DataTable data = ws.GetAllWorkshop();
+            String Query="";
+
+            int OrgID = -1;
+            if (Account.AccountType == 2)
+            {
+                OrgEmployee emp = new OrgEmployee();
+                OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
+            }
+            else if (Account.AccountType == 1)
+            {
+                OrgID = Account.AccountId;
+            }
+
+
+            switch (Account.AccountType)
+            {
+                case 1:
+                case 2:
+                    Query = "Select * from  Workshop where OrgID=" + OrgID;
+                    break;
+                case 3:
+                    Query = "Select * from Workshop";
+                    break;
+            }
+
+
+
+
+            DataTable data = ws.GetAllWorkshop(Query);
             if (data.Rows.Count != 0)
             {
                 dataGridView1.DataSource = data;
