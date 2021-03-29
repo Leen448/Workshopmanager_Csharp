@@ -108,6 +108,26 @@ namespace WorkshopManger
         }
 
 
+        public int UpdateEmpinfo(int id, string Fname, string Lname, string phone, string email,string paswword)
+        {
+            con.Open();
+            cmd.CommandText = "UpdteEmployeeInfo";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+            cmd.Parameters.Clear();///
+            cmd.Parameters.AddWithValue("@ID", id);
+            cmd.Parameters.AddWithValue("@FName", Fname);
+            cmd.Parameters.AddWithValue("@LName", Lname);
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@Phone", phone);
+            cmd.Parameters.AddWithValue("@Password", paswword);
+
+            int r = cmd.ExecuteNonQuery();
+
+            con.Close();
+            return r;
+        }
+
 
         public int DeleteEmp(int id)
         {
