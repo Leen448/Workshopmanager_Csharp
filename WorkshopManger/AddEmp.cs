@@ -27,5 +27,20 @@ namespace WorkshopManger
             Email_textbox.Text = "";
             Password_textbox.Text = "";
         }
+
+        private void BacktoHome_Click(object sender, EventArgs e)
+        {
+            switch (Account.AccountType)
+            {
+                case 1:
+                    Account.AccountType = 1;
+                    OrganizerAdminHome Orgadmin = new OrganizerAdminHome();
+                    Orgadmin.Tag = this;
+                    Orgadmin.Show(this);
+                    Hide();
+                    break;
+          
+            }
+        }
     }
 }
