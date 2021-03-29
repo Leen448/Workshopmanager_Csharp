@@ -58,6 +58,26 @@ namespace WorkshopManger
             return dt;
         }
 
+
+
+
+        public DataTable Check_reg(int aud,int wid)
+        {
+            con.Open();
+            cmd.CommandText = "SELECT * FROM Registration WHERE WorkshopID = " + wid + " AND AudienceID ="+aud;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+            cmd.Parameters.Clear();
+            SqlDataReader dr = cmd.ExecuteReader();// read from database
+            DataTable dt = new DataTable();
+            dt.Load(dr);// fill dt with data from dr
+            con.Close();
+            return dt;
+        }
+
+
+
+
         public DataTable GetAllOrgWorkshops(int id)
         {
             con.Open();
@@ -120,7 +140,7 @@ namespace WorkshopManger
         public int UpdateWorkshop(int id, string title, DateTime date,
                      string duration, string presenter,
                      decimal seatsCount, string location,
-                     string description , int  OrgId)
+                     string description, int OrgId)
         {
             con.Open();
             cmd.CommandText = "UpdateWorkshop";
@@ -156,11 +176,53 @@ namespace WorkshopManger
         }
 
 
+//Attendance method
+
+        public DataTable GetWorkshopTitle(int id)
+        {
+            con.Open();
+            cmd.CommandText = "Select ID,Title from Workshop where orgID =" + id;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+            cmd.Parameters.Clear();
+            SqlDataReader dr = cmd.ExecuteReader();// read from database
+            DataTable dt = new DataTable();
+            dt.Load(dr);// fill dt with data from dr
+            con.Close();
+            return dt;
+        }
 
 
+        public DataTable getAllRegisrtationbyOrg(int id, String Title)
+        {
+            con.Open();
+            cmd.CommandText = "Select Audience.ID AS AudID , Audience.FName +' '+ Audience.LName AS AudName ,Registration.Attendance ,Workshop.ID AS WID" +
+                              " from Audience JOIN Registration ON Audience.ID=Registration.AudienceID " +
+                              "Join Workshop ON Workshop.ID=Registration.WorkshopID " +
+                              "WHERE Registration.OrganaizerID=" + id + " AND  Workshop.Title='" + Title + "'";
 
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+            cmd.Parameters.Clear();
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);// fill dt with data from dr
+            con.Close();
+            return dt;
+        }
 
-
-
-    }
+        public int Attendance_status_update(int id, int WorkshopID)
+            {
+                con.Open();
+                cmd.CommandText = "Attendance_status";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = con;
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@AudID", id);
+                cmd.Parameters.AddWithValue("@WorkshopID", WorkshopID);
+                int result = cmd.ExecuteNonQuery();
+                con.Close();
+                return result;
+        }
+    } 
 }
