@@ -32,7 +32,6 @@ namespace WorkshopManger
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.My_Profile_Tab = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DeactivateBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.PasswordtextBox = new System.Windows.Forms.TextBox();
             this.EmailtextBox = new System.Windows.Forms.TextBox();
@@ -46,20 +45,18 @@ namespace WorkshopManger
             this.label1 = new System.Windows.Forms.Label();
             this.Workshops_tab = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Enrolled_Workshops_tap = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.My_Profile_Tab.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Workshops_tab.SuspendLayout();
-            this.Enrolled_Workshops_tap.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.My_Profile_Tab);
             this.tabControl1.Controls.Add(this.Workshops_tab);
-            this.tabControl1.Controls.Add(this.Enrolled_Workshops_tap);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -79,8 +76,8 @@ namespace WorkshopManger
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.DeactivateBtn);
             this.panel1.Controls.Add(this.UpdateBtn);
             this.panel1.Controls.Add(this.PasswordtextBox);
             this.panel1.Controls.Add(this.EmailtextBox);
@@ -96,17 +93,6 @@ namespace WorkshopManger
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(830, 561);
             this.panel1.TabIndex = 0;
-            // 
-            // DeactivateBtn
-            // 
-            this.DeactivateBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.DeactivateBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DeactivateBtn.Location = new System.Drawing.Point(187, 497);
-            this.DeactivateBtn.Name = "DeactivateBtn";
-            this.DeactivateBtn.Size = new System.Drawing.Size(539, 37);
-            this.DeactivateBtn.TabIndex = 21;
-            this.DeactivateBtn.Text = "Deactivate Account";
-            this.DeactivateBtn.UseVisualStyleBackColor = false;
             // 
             // UpdateBtn
             // 
@@ -211,30 +197,23 @@ namespace WorkshopManger
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(824, 561);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
-            // Enrolled_Workshops_tap
+            // tabPage1
             // 
-            this.Enrolled_Workshops_tap.Controls.Add(this.flowLayoutPanel2);
-            this.Enrolled_Workshops_tap.Location = new System.Drawing.Point(4, 29);
-            this.Enrolled_Workshops_tap.Name = "Enrolled_Workshops_tap";
-            this.Enrolled_Workshops_tap.Padding = new System.Windows.Forms.Padding(3);
-            this.Enrolled_Workshops_tap.Size = new System.Drawing.Size(816, 557);
-            this.Enrolled_Workshops_tap.TabIndex = 0;
-            this.Enrolled_Workshops_tap.Text = "Enrolled Workshops";
-            this.Enrolled_Workshops_tap.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(-4, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(824, 561);
-            this.flowLayoutPanel2.TabIndex = 0;
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(816, 557);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Logout";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.Logout_Click);
             // 
             // AudienceHome
             // 
@@ -246,13 +225,14 @@ namespace WorkshopManger
             this.ClientSize = new System.Drawing.Size(838, 595);
             this.Controls.Add(this.tabControl1);
             this.Name = "AudienceHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Audience";
             this.tabControl1.ResumeLayout(false);
             this.My_Profile_Tab.ResumeLayout(false);
+            this.My_Profile_Tab.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Workshops_tab.ResumeLayout(false);
-            this.Enrolled_Workshops_tap.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -263,7 +243,6 @@ namespace WorkshopManger
         private System.Windows.Forms.TabPage Workshops_tab;
         private System.Windows.Forms.TabPage My_Profile_Tab;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button DeactivateBtn;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.TextBox PasswordtextBox;
         private System.Windows.Forms.TextBox EmailtextBox;
@@ -277,5 +256,6 @@ namespace WorkshopManger
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
