@@ -30,6 +30,7 @@ namespace WorkshopManger
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GoToLogin = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@ namespace WorkshopManger
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.GoToLogin = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,20 +54,32 @@ namespace WorkshopManger
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtPassord);
             this.groupBox1.Controls.Add(this.txtUserName);
-            this.groupBox1.Location = new System.Drawing.Point(29, 18);
+            this.groupBox1.Location = new System.Drawing.Point(29, 14);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(781, 278);
+            this.groupBox1.Size = new System.Drawing.Size(853, 539);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account Info";
+            // 
+            // GoToLogin
+            // 
+            this.GoToLogin.AutoSize = true;
+            this.GoToLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GoToLogin.Location = new System.Drawing.Point(324, 499);
+            this.GoToLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.GoToLogin.Name = "GoToLogin";
+            this.GoToLogin.Size = new System.Drawing.Size(223, 24);
+            this.GoToLogin.TabIndex = 11;
+            this.GoToLogin.Text = "New Audience ? Sign up";
+            this.GoToLogin.Click += new System.EventHandler(this.GoToLogin_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(121, 32);
+            this.label4.Location = new System.Drawing.Point(130, 142);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 24);
@@ -82,7 +94,7 @@ namespace WorkshopManger
             "Orgnaizer Admin",
             "Orgnaizer Employee",
             "Admin"});
-            this.comboBox1.Location = new System.Drawing.Point(259, 28);
+            this.comboBox1.Location = new System.Drawing.Point(268, 138);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(352, 28);
             this.comboBox1.TabIndex = 3;
@@ -91,7 +103,7 @@ namespace WorkshopManger
             // 
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin.Location = new System.Drawing.Point(259, 175);
+            this.btnLogin.Location = new System.Drawing.Point(268, 411);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(352, 43);
@@ -104,7 +116,7 @@ namespace WorkshopManger
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(121, 130);
+            this.label2.Location = new System.Drawing.Point(130, 295);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 24);
@@ -115,7 +127,7 @@ namespace WorkshopManger
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(121, 77);
+            this.label1.Location = new System.Drawing.Point(130, 217);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 24);
@@ -125,7 +137,7 @@ namespace WorkshopManger
             // txtPassord
             // 
             this.txtPassord.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassord.Location = new System.Drawing.Point(259, 127);
+            this.txtPassord.Location = new System.Drawing.Point(268, 292);
             this.txtPassord.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassord.Name = "txtPassord";
             this.txtPassord.Size = new System.Drawing.Size(352, 32);
@@ -134,7 +146,7 @@ namespace WorkshopManger
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUserName.Location = new System.Drawing.Point(259, 68);
+            this.txtUserName.Location = new System.Drawing.Point(268, 208);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(352, 32);
@@ -173,23 +185,11 @@ namespace WorkshopManger
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // GoToLogin
-            // 
-            this.GoToLogin.AutoSize = true;
-            this.GoToLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GoToLogin.Location = new System.Drawing.Point(313, 223);
-            this.GoToLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.GoToLogin.Name = "GoToLogin";
-            this.GoToLogin.Size = new System.Drawing.Size(223, 24);
-            this.GoToLogin.TabIndex = 11;
-            this.GoToLogin.Text = "New Audience ? Sign up";
-            this.GoToLogin.Click += new System.EventHandler(this.GoToLogin_Click);
-            // 
             // User_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 311);
+            this.ClientSize = new System.Drawing.Size(905, 581);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "User_Login";
