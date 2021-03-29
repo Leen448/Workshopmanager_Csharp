@@ -49,8 +49,40 @@ namespace WorkshopManger
 
         private void ViewAudience_Load(object sender, EventArgs e)
         {
-           Audience aud = new Audience();
-            DataTable data = aud.GetAllAudience();
+            Audience aud = new Audience();
+            String Query = "";
+
+
+            int OrgID = -1;
+            if (Account.AccountType == 2)
+            {
+                OrgEmployee emp = new OrgEmployee();
+                OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
+            }
+            else if (Account.AccountType == 1)
+            {
+                OrgID = Account.AccountId;
+            }
+
+
+            switch (Account.AccountType)
+            {
+                case 1:
+                    Query = "Select DISTINCT Audience.ID,FName,LName,Email,Phone from Audience " +
+                        "join Registration on Registration.AudienceID = Audience.ID " +
+                        "where Registration.OrganaizerID="+OrgID;
+                    break;
+                case 2:
+                    Query = "Select DISTINCT  Audience.ID,FName,LName,Email,Phone from Audience " +
+                            "join Registration on Registration.AudienceID = Audience.ID " +
+                            "where Registration.OrganaizerID="+OrgID;
+                    break;
+                case 3:
+                    Query = "Select * from Workshop";
+                    break;
+            }
+
+            DataTable data = aud.GetAllAudience(Query);
             if (data.Rows.Count != 0)
             {
                 dataGridView1.DataSource = data;
