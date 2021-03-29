@@ -24,10 +24,10 @@ namespace WorkshopManger
 
 
 
-        public DataTable GetAllAudience()
+        public DataTable GetAllAudience(String Query)
         {
             con.Open();
-            cmd.CommandText = "Select * from Audience";
+            cmd.CommandText = Query;
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con;
             cmd.Parameters.Clear();
