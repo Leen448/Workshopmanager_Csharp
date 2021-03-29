@@ -47,7 +47,7 @@ namespace WorkshopManger
                 {
                     MessageBox.Show("User Already exists.. Please try to Login");
                 }
-            }
+            }else
             {
                 MessageBox.Show("Please ensure fill all fileds"); 
             }
