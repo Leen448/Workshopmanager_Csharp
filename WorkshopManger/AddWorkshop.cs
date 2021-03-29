@@ -41,19 +41,21 @@ namespace WorkshopManger
               OrgID);
 
             MessageBox.Show("Data Inserted successfully.");
-           
+            ClearControls();
+        }
+
+
+        private void ClearControls()
+        {
             textBoxTitle.Text = "";
-            dateTimePickerDate.Value= DateTime.Today;
+            dateTimePickerDate.Value = DateTime.Today;
             textBoxDuration.Text = "";
             textBoxPresenter.Text = "";
             numericUpDownSeats.Text = "";
             textBoxLocation.Text = "";
-
-
+            richTextBoxDesc.Clear();
 
         }
-
-
         private void BacktoHomebtn(object sender, EventArgs e)
         {
             switch (Account.AccountType)
