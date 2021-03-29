@@ -30,6 +30,7 @@ namespace WorkshopManger
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BacktoHomebtn = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,6 +48,7 @@ namespace WorkshopManger
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BacktoHomebtn);
             this.groupBox1.Controls.Add(this.Delete_button);
             this.groupBox1.Controls.Add(this.Update_button);
             this.groupBox1.Controls.Add(this.dataGridView1);
@@ -67,9 +69,20 @@ namespace WorkshopManger
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manage employee";
             // 
+            // BacktoHomebtn
+            // 
+            this.BacktoHomebtn.Location = new System.Drawing.Point(765, 525);
+            this.BacktoHomebtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BacktoHomebtn.Name = "BacktoHomebtn";
+            this.BacktoHomebtn.Size = new System.Drawing.Size(86, 31);
+            this.BacktoHomebtn.TabIndex = 13;
+            this.BacktoHomebtn.Text = "Cancel";
+            this.BacktoHomebtn.UseVisualStyleBackColor = true;
+            this.BacktoHomebtn.Click += new System.EventHandler(this.BacktoHomebtn_Click);
+            // 
             // Delete_button
             // 
-            this.Delete_button.Location = new System.Drawing.Point(458, 476);
+            this.Delete_button.Location = new System.Drawing.Point(658, 525);
             this.Delete_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Delete_button.Name = "Delete_button";
             this.Delete_button.Size = new System.Drawing.Size(86, 31);
@@ -80,7 +93,7 @@ namespace WorkshopManger
             // 
             // Update_button
             // 
-            this.Update_button.Location = new System.Drawing.Point(329, 476);
+            this.Update_button.Location = new System.Drawing.Point(551, 525);
             this.Update_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(86, 31);
@@ -92,12 +105,12 @@ namespace WorkshopManger
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 233);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 190);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(745, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(834, 327);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmp_CellContentClick);
             // 
@@ -190,6 +203,7 @@ namespace WorkshopManger
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ManageEmp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageEmp";
             this.Load += new System.EventHandler(this.FRM_ManageEmp_Load);
             this.groupBox1.ResumeLayout(false);
@@ -213,5 +227,6 @@ namespace WorkshopManger
         private System.Windows.Forms.TextBox LName_textbox;
         private System.Windows.Forms.TextBox FName_textbox;
         private System.Windows.Forms.Button Delete_button;
+        private System.Windows.Forms.Button BacktoHomebtn;
     }
 }

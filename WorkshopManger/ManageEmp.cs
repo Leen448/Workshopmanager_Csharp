@@ -28,7 +28,7 @@ namespace WorkshopManger
         {
             OrgEmployee emp = new OrgEmployee();
             int OrgID = Account.AccountId;
-            MessageBox.Show("OrgID:" + OrgID);
+          
             DataTable data = emp.GetAllEmpInOrg(OrgID);
             if (data.Rows.Count != 0)
             {
@@ -97,9 +97,19 @@ namespace WorkshopManger
             Email_textbox.Text = "";
         }
 
+        private void BacktoHomebtn_Click(object sender, EventArgs e)
+        {
+            switch (Account.AccountType)
+            {
+                case 1:
+                    Account.AccountType = 1;
+                    OrganizerAdminHome Orgadmin = new OrganizerAdminHome();
+                    Orgadmin.Tag = this;
+                    Orgadmin.Show(this);
+                    Hide();
+                    break;
+            }
 
-
-
-
+        }
     }
 }
