@@ -61,7 +61,7 @@ namespace WorkshopManger
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(119, 99);
+            this.label2.Location = new System.Drawing.Point(129, 152);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 24);
@@ -72,7 +72,7 @@ namespace WorkshopManger
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(119, 45);
+            this.label1.Location = new System.Drawing.Point(129, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 24);
@@ -82,7 +82,7 @@ namespace WorkshopManger
             // LName_textbox
             // 
             this.LName_textbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LName_textbox.Location = new System.Drawing.Point(259, 99);
+            this.LName_textbox.Location = new System.Drawing.Point(269, 152);
             this.LName_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LName_textbox.Name = "LName_textbox";
             this.LName_textbox.Size = new System.Drawing.Size(352, 32);
@@ -91,7 +91,7 @@ namespace WorkshopManger
             // FName_textbox
             // 
             this.FName_textbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FName_textbox.Location = new System.Drawing.Point(259, 45);
+            this.FName_textbox.Location = new System.Drawing.Point(269, 77);
             this.FName_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FName_textbox.Name = "FName_textbox";
             this.FName_textbox.Size = new System.Drawing.Size(352, 32);
@@ -115,7 +115,7 @@ namespace WorkshopManger
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(781, 427);
+            this.groupBox1.Size = new System.Drawing.Size(882, 558);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account Info";
@@ -124,7 +124,7 @@ namespace WorkshopManger
             // 
             this.GoToLogin.AutoSize = true;
             this.GoToLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GoToLogin.Location = new System.Drawing.Point(315, 374);
+            this.GoToLogin.Location = new System.Drawing.Point(326, 508);
             this.GoToLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.GoToLogin.Name = "GoToLogin";
             this.GoToLogin.Size = new System.Drawing.Size(223, 24);
@@ -136,7 +136,7 @@ namespace WorkshopManger
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(259, 326);
+            this.button2.Location = new System.Drawing.Point(269, 435);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(352, 43);
@@ -149,7 +149,7 @@ namespace WorkshopManger
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(119, 272);
+            this.label5.Location = new System.Drawing.Point(129, 363);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 24);
@@ -160,7 +160,7 @@ namespace WorkshopManger
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(119, 214);
+            this.label4.Location = new System.Drawing.Point(129, 291);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 24);
@@ -171,7 +171,7 @@ namespace WorkshopManger
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(119, 158);
+            this.label3.Location = new System.Drawing.Point(129, 221);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 24);
@@ -181,7 +181,7 @@ namespace WorkshopManger
             // Phone_textbox
             // 
             this.Phone_textbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Phone_textbox.Location = new System.Drawing.Point(259, 272);
+            this.Phone_textbox.Location = new System.Drawing.Point(269, 363);
             this.Phone_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Phone_textbox.Name = "Phone_textbox";
             this.Phone_textbox.Size = new System.Drawing.Size(352, 32);
@@ -190,7 +190,7 @@ namespace WorkshopManger
             // Password_textbox
             // 
             this.Password_textbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Password_textbox.Location = new System.Drawing.Point(259, 214);
+            this.Password_textbox.Location = new System.Drawing.Point(269, 291);
             this.Password_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Password_textbox.Name = "Password_textbox";
             this.Password_textbox.Size = new System.Drawing.Size(352, 32);
@@ -199,7 +199,7 @@ namespace WorkshopManger
             // Email_textbox
             // 
             this.Email_textbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Email_textbox.Location = new System.Drawing.Point(259, 158);
+            this.Email_textbox.Location = new System.Drawing.Point(269, 221);
             this.Email_textbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Email_textbox.Name = "Email_textbox";
             this.Email_textbox.Size = new System.Drawing.Size(352, 32);
@@ -333,9 +333,10 @@ namespace WorkshopManger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(905, 581);
             this.Controls.Add(this.groupBox1);
             this.Name = "signup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
