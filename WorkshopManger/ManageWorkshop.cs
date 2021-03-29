@@ -52,29 +52,35 @@ namespace WorkshopManger
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            // call to UpdateCustomer Function
-            int OrgID=0;
+            Workshop workshop = new Workshop();
 
+            // call to UpdateCustomer Function
+            int OrgID = 0;
             if (Account.AccountType == 2)
             {
-                OrgID= emp.GetOrgIdByEmpId(Account.AccountId);
-
-
+                OrgID = emp.GetOrgIdByEmpId(Account.AccountId);
             }
-            else if (Account.AccountType == 1) {
-                OrgID=Account.AccountId;
-
+            else if (Account.AccountType == 1)
+            {
+                OrgID = Account.AccountId;
             }
-
             int result = workshop.UpdateWorkshop(r, textBoxTitle.Text, dateTimePickerDate.Value, textBoxDuration.Text,
                  textBoxPresenter.Text, numericUpDownSeats.Value, textBoxLocation.Text, richTextBoxDesc.Text, OrgID);
 
+
             if (result != 0)
             {
-                MessageBox.Show("Data Updated Successfully.");
+                MessageBox.Show("Data Updated.");
+               
                 LoadData();
-                ClearControls();
             }
+            else 
+            {
+                MessageBox.Show("Something went wrong try again later.");
+            }
+
+
+
         }
 
         private void ClearControls()
@@ -121,6 +127,26 @@ namespace WorkshopManger
                 MessageBox.Show("Data Deleted.");
                 ClearControls();
                 LoadData();
+            }
+        }
+
+
+        private void BacktoHome_clcik(object sender, EventArgs e)
+        {
+            switch (Account.AccountType)
+            {
+                case 1:
+                    OrganizerAdminHome Orgadmin = new OrganizerAdminHome();
+                    Orgadmin.Tag = this;
+                    Orgadmin.Show(this);
+                    Hide();
+                    break;
+                case 2:
+                    OrgnaizerEmpHome OrgEmp = new OrgnaizerEmpHome();
+                    OrgEmp.Tag = this;
+                    OrgEmp.Show(this);
+                    Hide();
+                    break;
             }
         }
 
