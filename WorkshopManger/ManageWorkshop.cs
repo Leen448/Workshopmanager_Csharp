@@ -73,6 +73,7 @@ namespace WorkshopManger
                 MessageBox.Show("Data Updated.");
                
                 LoadData();
+                ClearControls();
             }
             else 
             {
@@ -91,7 +92,8 @@ namespace WorkshopManger
             textBoxPresenter.Text = "";
             numericUpDownSeats.Text = "";
             textBoxLocation.Text = "";
-            richTextBoxDesc.Text = "";
+            richTextBoxDesc.Clear();
+
         }
 
         int r;
