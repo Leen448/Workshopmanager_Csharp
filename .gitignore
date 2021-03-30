@@ -1,10 +1,11 @@
 WorkshopManger/bin/*
 WorkshopManger/.vs/*
 WorkshopManger/obj/*
-Workshopmanager_Csharp\.vs
+.vs
 .vs/*
 .vs/Workshopmanager_Csharp/v16/.suo
 WorkshopManger/obj/Debug/netcoreapp3.1/WorkshopManger.assets.cache
 ../.vs/slnx.sqlite
 WorkshopManger/.vs/WorkshopManger/v16/.suo
 *.cache
+WorkshopManger/.vs/WorkshopManger/v16/.suo
